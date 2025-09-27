@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dhani Patel</title>
+        <meta name="description" content="This is my online resume " />
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+/* --- BASE STYLES --- */
+body {
+    font-family: sans-serif;
+    background-color: #f7f7f7;
+    color: #444;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- CONTENT WRAPPER (CENTERING) --- */
+.content-wrapper {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; 
+}
+
+/* --- ELEMENT STYLES --- */
+.header-titles {
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.main-name {
+    font-size: 2em;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.2;
+}
+.sub-title {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 5px;
+}
+.paragraph-style {
+    margin-bottom: 25px;
+    line-height: 1.65;
+    font-size: 1.05em;
+    text-align: left;
+}
+
+/* --- CODE COMMENT STYLE (For the text itself) --- */
+.code-comment {
+    font-family: monospace; 
+    font-size: 0.875rem; 
+    color: #a5a5a5; 
+    width: 0; 
+}
+.code-comment a {
+    color: #a5a5a5; 
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.code-comment-wrapper {
+    margin-bottom: 10px;
+    text-align: left;
+    margin-top: 30px;
+    display: inline-block; 
+}
+
+
+/* --- TYPEWRITER EFFECT STYLES --- */
+
+/* Keyframe for the typing effect: simply makes the width grow */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Keyframe for the blinking cursor (optional but recommended) */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #a5a5a5; }
+}
+
+.typewriter-effect {
+    /* The line "// open for internship - check out my resume" has 43 characters */
+    --typing-steps: 43;
+    --typing-speed: 2s;
+    
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid #a5a5a5;
+    
+    /* MODIFICATION 1: Use CSS variables to control animation timing */
+    animation: 
+      /* The typing animation runs once and stays at the final state (forwards) */
+      typing var(--typing-speed) steps(var(--typing-steps), end) forwards,
+      /* The blink-caret animation runs only for the duration of the typing */
+      blink-caret .75s step-end calc(var(--typing-speed) / 2); /* Run blink animation for half the typing speed */
+
+    /* After the typing animation finishes, we want the border/cursor to disappear */
+    animation-delay: 0s, var(--typing-speed);
+    animation-iteration-count: 1; /* Ensure all animations run only once */
+    animation-fill-mode: forwards; /* Keep the last state of the animation (full width) */
+}
+
+/* FINAL FIX: This makes the cursor disappear entirely after the typing is done */
+.typewriter-effect:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    border-right: .15em solid transparent; /* Set a transparent border for the final state */
+    animation: blink-caret .75s step-end 1; /* Run blinking once to hide */
+    animation-delay: var(--typing-speed);
+    animation-fill-mode: forwards;
+}
+
+/* --- SIGNATURE STYLE --- */
+.signature {
+    /* font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    color: #607D8B;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: lowercase; 
+    text-align: left; */
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    color: #607D8B;
+    font-weight: 7;
+    line-height: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* This CSS property is already making it lowercase */
+    text-transform: lowercase; 
+    text-align: left;
+}
+
+/* --- LINK STYLES --- */
+.bottom-links {
+    margin-top: 15px;
+    padding-bottom: 40px;
+    display: flex;
+    gap: 15px;
+    text-align: left;
+}
+.bottom-links a {
+    color: #666;
+    text-decoration: none;
+    padding: 2px 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+    font-size: 1em;
+}
+.bottom-links a:hover {
+    color: #0077b5;
+    border-bottom-color: #0077b5;
+}
+</style>
+    </head>
+    <body class="mx-auto pt-8">
+        
+        <div class="content-wrapper">
+
+            <div class="code-comment-wrapper">
+                <code class="code-comment typewriter-effect">
+                    // open for internship - check out my
+                    <a href="https://dhanipatel.github.io/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
+                        resume
+                    </a>
+                </code>
+            </div>
+
+            <div class="header-titles">
+                <div class="main-name">Dhani Patel</div>
+                <div class="sub-title">Software Engineer</div>
+            </div>
+
+            <p class="paragraph-style">
+                I’m a motivated software engineer and student from India, passionate about building impactful software solutions and exploring emerging technologies. My interests lie in full-stack web development, cloud computing, and AI/ML applications. I have hands-on experience with Node.js, React, MongoDB, and modern cloud platforms like AWS and Google Cloud.
+            </p>
+            <p class="paragraph-style">
+                Since my college years, I’ve been building projects that bridge real-world problems and technology, from web applications to AI-driven tools. I enjoy experimenting with new frameworks, optimizing code, and continuously learning to enhance my technical skill set.
+            </p>
+            <p class="paragraph-style">
+                Outside of programming, I enjoy solving puzzles, playing strategy games, and exploring new hobbies. I’m also an animal lover and find inspiration in the simplicity of nature.
+            </p>
+
+            <p class="signature"> DhaniPatel </p> 
+            <b>Let's connect! </b>
+            <div class="bottom-links"> 
+                <a href="https://www.linkedin.com/in/dhani-patel-3054a72ba/" target="_blank" rel="noreferrer noopener">Linkedin</a>
+                <a href="https://github.com/DhaniPatel" target="_blank" rel="noreferrer noopener">GitHub</a>
+            </div>
+        </div>
+    </body>
+
+    <footer class="pb-1">
+        <div class="container pt-9">
+            <div class="mb-9 flex justify-center">
+            </div>
+        </div>
+    </footer>
+</html>
